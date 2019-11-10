@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.com-text {
+  &-h1 {
+    font-size: $font-size-h1;
+    color: $blue;
+    @include text-truncated();
+  }
+
+  &-h6 {
+    font-size: $font-size-base;
+    color: $black;
+    font-weight: bold;
+  }
+
+  &-p {
+    font-size: $font-size-base;
+    @include text-truncated();
+  }
+
+  &-span {
+    font-size: $font-size-base;
+    @include text-truncated();
+  }
+}

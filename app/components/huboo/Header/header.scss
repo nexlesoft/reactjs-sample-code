@@ -1,0 +1,26 @@
+.hb-header {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 265px;
+  position: relative;
+  padding-top: 10px;
+  @media (max-width: 991px) {
+    padding-top: 0px;
+  }
+  @media (max-width: 767px) {
+  }
+  @media (max-width: 480px) {
+    padding-top: 0px;
+  }
+}
+.headerLanding {
+  background-image: url('../../../images/huboo/bgHeader.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.headerProfile {
+  background-image: url('../../../images/huboo/bgHeaderProfile.png');
+  background-position: center;
+}
