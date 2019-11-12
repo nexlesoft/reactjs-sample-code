@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 
-import Header from '../../components/Header';
+import Header from '../../components/Header/Header';
 
 import injectReducer from '../../utils/injectReducer';
 import injectSaga from '../../utils/injectSaga';
@@ -21,17 +21,32 @@ import injectSaga from '../../utils/injectSaga';
 import { makeSelectCurrentCompShown } from '../App/selectors';
 
 //= =====dynamic components
-import UserProfile from '../../components/UserProfile';
-import Dashboard from '../Dashboard';
+
 //-------------
 
 import reducer from './reducer';
 import saga from './saga';
+import Images from '../../images';
 
-const dynamicComponents = {
-  profile: UserProfile,
-  dashboard: Dashboard,
-};
+const dynamicComponents = {};
+
+function HomeItem() {
+  return (
+    <div className="card" style={{ width: '18em', margin: '10px' }}>
+      <img src={Images.hubooThumbnail} className="card-img-top" alt="" />
+      <div className="card-body">
+        <h5 className="card-title">Huboo</h5>
+        <p className="card-text">
+          HLV Esports - việc tìm kiếm những người chơi có trình độ cao để chơi
+          cùng và được hướng dẫn cải thiện kỹ năng。
+        </p>
+        <a href="/huboo" className="btn btn-primary">
+          View Demo
+        </a>
+      </div>
+    </div>
+  );
+}
 
 /* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.PureComponent {
@@ -49,7 +64,6 @@ export class HomePage extends React.PureComponent {
         }
       }
       if (Found) DynComp = React.createElement(Found);
-      // React.createElement(dynamicComponents[currentCompName]);
       else DynComp = <span />;
     } else DynComp = <span />;
     return (
@@ -63,6 +77,7 @@ export class HomePage extends React.PureComponent {
         </Helmet>
         <Header />
         <div>{DynComp}</div>
+        <HomeItem />
       </div>
     );
   }
@@ -70,34 +85,16 @@ export class HomePage extends React.PureComponent {
 
 HomePage.propTypes = {
   match: PropTypes.object,
-  loading: PropTypes.bool,
-  error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
 };
-
-// export function mapDispatchToProps(dispatch) {
-//   return {
-//     onSubmitForm: evt => {
-//       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
-//       dispatch(loadRepos());
-//     },
-//     // ---------------------
-//     onSendRequestBundle: evt => {
-//       dispatch(sendRequestBundle(5));
-//     },
-//   };
-// }
 
 const mapStateToProps = createStructuredSelector({
   currentCompShown: makeSelectCurrentCompShown(),
 });
 
-const withConnect = connect(
-  mapStateToProps,
-  // mapDispatchToProps,
-);
+const withConnect = connect(mapStateToProps);
 
-const withReducer = injectReducer({ key: 'fhome', reducer });
-const withSaga = injectSaga({ key: 'home', saga });
+const withReducer = injectReducer({ key: 'reducerHome', reducer });
+const withSaga = injectSaga({ key: 'sagaHome', saga });
 
 export default compose(
   withReducer,

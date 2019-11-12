@@ -10,11 +10,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
-
+// import ReduxToastr from 'react-redux-toastr';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import HomePage from '../HomePage/Loadable';
+// eslint-disable-next-line import/no-unresolved
 import Huboo from '../hubooPage/Loadable';
-
+import DownloadAppModal from '../../views/HubooDownloadAppModal';
+import HubooSignUp from '../../views/HubooSignUp';
 // import Authorizer from '../../utils/injectAuthorizer';
 
 import GlobalStyle from '../../global-styles';
@@ -43,6 +45,8 @@ export default function App() {
         <Route path="" component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
+      <DownloadAppModal />
+      <HubooSignUp />
     </AppWrapper>
   );
 }

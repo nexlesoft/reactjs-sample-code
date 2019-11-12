@@ -1,0 +1,44 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.btn-scale {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  float: left;
+  .btn-s-green {
+    cursor: pointer;
+    text-align: center;
+    button {
+      background-color: transparent;
+      position: relative;
+      margin-top: 0px;
+      padding: 0px;
+      width: 144px;
+      height: 41px;
+      font-family: $fontRegular;
+      box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16),
+        0 0px 0px 0 rgba(0, 0, 0, 0.12) !important;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: none;
+      color: aliceblue;
+      cursor: pointer;
+      i {
+        position: relative;
+        float: left;
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+.btn-green-bg {
+  background-image: url('../../images/bgBtnGreen.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 152px;
+  height: 44px;
+  background-position: center;
+  margin: auto;
+}

@@ -25,6 +25,16 @@ const makeSelectLocation = () =>
     routerState.get('location').toJS(),
   );
 
+const makeSelectStatusDownloadModal = () =>
+  createSelector(selectGlobal, globalState =>
+    globalState.get('openDownloadAppModal'),
+  );
+
+const makeSelectStatusSignupModal = () =>
+  createSelector(selectGlobal, globalState =>
+    globalState.get('openSignUpModal'),
+  );
+
 export {
   selectGlobal,
   makeSelectCurrentUser,
@@ -32,4 +42,6 @@ export {
   makeSelectLoading,
   makeSelectError,
   makeSelectLocation,
+  makeSelectStatusDownloadModal,
+  makeSelectStatusSignupModal,
 };

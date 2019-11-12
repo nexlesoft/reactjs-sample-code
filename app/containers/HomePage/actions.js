@@ -1,4 +1,8 @@
-import { CHANGE_USERNAME, RECEIVE_REQUEST_BUNDLE_RESULT, SEND_REQUEST_BUNDLE } from './constants';
+import {
+  CHANGE_USERNAME,
+  RECEIVE_REQUEST_BUNDLE_RESULT,
+  SEND_REQUEST_BUNDLE,
+} from './constants';
 
 /**
  * Changes the input field of the form

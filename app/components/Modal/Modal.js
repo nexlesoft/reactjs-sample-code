@@ -20,7 +20,7 @@ const Modal = ({ isOpen, children, ...rest }) => {
       className={cn('com-modal-container')}
       classNames={{
         ...option.classNames,
-        modal: styles.modalContainer,
+        modal: 'modal-container',
         overlay: overlayStyle,
       }}
     >
@@ -31,12 +31,12 @@ const Modal = ({ isOpen, children, ...rest }) => {
 
 Modal.propTypes = {
   children: PropTypes.node,
-  // isOpen: PropTypes.bool, //comment this line to test with BlueKit
+  isOpen: PropTypes.bool,
 };
 
 Modal.defaultProps = {
   children: '',
-  // isOpen: false, //comment this line to test with BlueKit
+  isOpen: false,
 };
 
 export default Modal;

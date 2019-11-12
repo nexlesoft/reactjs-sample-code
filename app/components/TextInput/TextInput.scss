@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+//TODO: Add scss for textInput from here
+
+.com-input {
+  background-color: #fff;
+  &:focus {
+    background-color: #fcf8e3;
+  }
+  &:disabled:hover {
+    cursor: not-allowed;
+  }
+}

@@ -1,5 +1,5 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 // This should in Bluekit
 
@@ -15,7 +15,7 @@
   padding-top: 100px;
 }
 
-.modalContainer {
+.modal-container {
   background: transparent !important;
   box-shadow: none !important;
 }

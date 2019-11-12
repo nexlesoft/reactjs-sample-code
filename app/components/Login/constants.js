@@ -1,4 +1,0 @@
-export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
-export const VALIDATE_USER = "VALIDATE_USER";
-export const USERINFO_CHANGE = "USERINFO_CHANGE";
-export const USER_LOGOUT = "USER_LOGOUT"

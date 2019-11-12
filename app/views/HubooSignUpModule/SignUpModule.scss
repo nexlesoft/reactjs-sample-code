@@ -1,0 +1,127 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.signup-module-email {
+  position: relative;
+  width: 505px;
+  background-color: $white;
+  border-radius: 8px;
+  padding: 15px 0px;
+  margin: 10% auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+  height: 300px;
+  .close-pu {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 9;
+    img {
+      text-align: center;
+    }
+    button {
+      box-shadow: none !important;
+    }
+  }
+  .top-pu {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 0px 15px 5px;
+    text-align: center;
+    border-bottom: 1px solid #e3e3e3;
+    .title-signup {
+      font-size: $font24;
+      text-transform: uppercase;
+      text-align: left;
+      position: relative;
+      color: $blueColor;
+    }
+    .icon-close {
+      position: absolute;
+      right: 15px;
+      top: 0px;
+      z-index: 9;
+      img {
+        text-align: center;
+      }
+      button {
+        box-shadow: none !important;
+        background: transparent;
+        cursor: pointer;
+        border: none;
+      }
+    }
+  }
+  .col-drop-phone {
+    padding: 0px 50px;
+  }
+  .text-content-signup {
+    position: relative;
+    float: left;
+    margin: 15px;
+    padding: 0px 50px;
+    font-family: $fontThin;
+    font-weight: $fontWeightThin;
+    .bold {
+      font-weight: bold;
+    }
+  }
+  .col-btn-login {
+    padding: 0px 15px;
+    text-align: center;
+    .btn-login-home {
+      transform: perspective(400px) rotateY(25deg);
+      background-color: $blueColor;
+      position: relative;
+      width: 150px;
+      margin-top: 0px;
+      height: 40px;
+      padding: 4px 15px;
+      i {
+        position: relative;
+        float: left;
+        padding-top: 5px;
+      }
+    }
+  }
+
+  .pa-on-top {
+    padding: 0px 15px;
+  }
+
+  .input-phone {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    .col-phone {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+      span {
+        float: left;
+        padding-top: 9px;
+        padding-right: 10px;
+        margin: 0px;
+        padding-left: 10px;
+        i {
+          color: #808080;
+          font-size: 18px;
+        }
+      }
+      .row-input {
+        height: 30px;
+        padding: 5px 0px;
+        margin: 0px;
+        border-bottom: 0px;
+        font-size: 16px;
+        color: #808080;
+        font-weight: 300;
+      }
+      .row-input::placeholder {
+        color: #808080;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.popup-download-app {
+  position: relative;
+  width: 505px;
+  background-color: $white;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 10% auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+  height: 480px;
+  @media (max-width: 991px) {
+    height: 720px;
+  }
+  .close-pu {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 9;
+    img {
+      text-align: center;
+    }
+    button {
+      box-shadow: none !important;
+      background: transparent;
+      cursor: pointer;
+      border: none;
+    }
+  }
+  .row-img {
+    text-align: center;
+  }
+  .col-images {
+    text-align: center;
+  }
+  .row-text {
+    text-align: center;
+    span {
+      display: block;
+      width: 100%;
+    }
+    .title-hoboopu {
+      font-family: $fontRegular;
+      font-size: $font24;
+      color: #5c5c5c;
+      padding-bottom: 5px;
+    }
+    .text-hoboopu {
+      font-family: $fontThin;
+      font-size: $font18;
+      font-weight: $fontWeightThin;
+      color: #5c5c5c;
+    }
+  }
+  .paBtn {
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12) !important;
+  }
+  .fl {
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  .mgtop {
+    margin-top: 15px;
+  }
+}

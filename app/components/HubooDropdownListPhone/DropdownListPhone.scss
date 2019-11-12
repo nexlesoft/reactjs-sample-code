@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.dropdown-listphone {
+  position: relative;
+  .dropdown-item {
+    position: relative;
+    padding-top: 0px;
+    &:hover {
+      background: none;
+    }
+    .btn-dropdown {
+      background-color: #fff !important;
+      border-radius: 5px;
+      color: #000 !important;
+      border: 1px solid #fff;
+      padding: 5px 10px;
+      padding-top: 6px;
+      margin: 0px;
+      width: 90%;
+      box-shadow: 0 0px 0 0 #4285f4;
+      border: 1px solid #e3e3e3;
+      width: 115px;
+      i {
+        padding-left: 5px;
+      }
+    }
+    .list-item {
+      width: 120px;
+      min-width: 120px;
+      padding: 0px;
+      .btn-item {
+        padding: 0.25rem 10px;
+        font-weight: normal;
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+        color: $black !important;
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
